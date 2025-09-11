@@ -1,4 +1,4 @@
-import { ImageListItem, ImageList } from "@mui/material";
+import { ImageListItem, ImageList, Box } from "@mui/material";
 
 export const ImageGallery = ({ images }) => {
   return (
@@ -9,12 +9,19 @@ export const ImageGallery = ({ images }) => {
           image ? (
             <ImageListItem key={image}>
               {" "}
-              <img
+              <Box
+                component="img"
                 src={`${image}?w=164&h=164&fit=crop&auto=format`}
                 srcSet={`${image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                 alt="Imagen de la nota"
                 loading="lazy"
-              />{" "}
+                sx={{
+                  width: { xs: "160px", sm: "200px", md: "300px" },
+                  height: { xs: "160px", sm: "200px", md: "300px" },
+                  objectFit: "cover",
+                  borderRadius: 2,
+                }}
+              />
             </ImageListItem>
           ) : null
         )}

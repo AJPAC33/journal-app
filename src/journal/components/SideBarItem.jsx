@@ -1,6 +1,6 @@
 import { TurnedInNot } from "@mui/icons-material";
 import {
-  Grid,
+  Grid2,
   ListItem,
   ListItemButton,
   ListItemIcon,
@@ -33,10 +33,10 @@ export const SideBarItem = ({ title, body, id, date, imageUrls = [] }) => {
         <ListItemIcon>
           <TurnedInNot />
         </ListItemIcon>
-        <Grid container>
+        <Grid2 container>
           <ListItemText primary={title} />
           <ListItemText secondary={body} />
-        </Grid>
+        </Grid2>
       </ListItemButton>
     </ListItem>
   );
