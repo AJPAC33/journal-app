@@ -7,7 +7,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import React from "react";
 import { useSelector } from "react-redux";
 import { SideBarItem } from "./SideBarItem";
 import { AiOutlineClose } from "react-icons/ai";
@@ -41,7 +40,7 @@ export const SideBar = ({ drawerWidth, open, onClose }) => {
         </Toolbar>
 
         <Divider />
-        <List>
+        <List onClick={onClose}>
           {notes.map((note) => (
             <SideBarItem key={note.id} {...note} />
           ))}
